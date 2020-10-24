@@ -1,0 +1,10 @@
+git init
+git pull
+git status
+git add
+git add *
+git checkout -m ""
+git push
+git log
+git checkout ___
+git checkout master

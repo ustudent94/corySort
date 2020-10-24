@@ -1,0 +1,385 @@
+
+(base) C:\Users\Cory>cd C:\Users\Cory\Documents\School\Git Hub Tutorial
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git init
+Initialized empty Git repository in C:/Users/Cory/Documents/School/Git Hub Tutorial/.git/
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git pull https://github.com/ustudent94/corySort
+remote: Enumerating objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 3
+Unpacking objects: 100% (3/3), 802 bytes | 66.00 KiB/s, done.
+From https://github.com/ustudent94/corySort
+ * branch            HEAD       -> FETCH_HEAD
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git log
+commit a073dc0e01fa8a3e71afd7054422547fa4e560ba (HEAD -> master)
+Author: unknown <cory.s.christensen@hotmail.com>
+Date:   Wed Jul 10 08:03:34 2019 -0600
+
+    Initial release of corySort algorithm
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git diff
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        I'm a text file.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git add "I'm a text file.txt"
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   I'm a text file.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        another text file.txt
+
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   I'm a text file.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        another text file.txt
+
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>cd ..
+
+(base) C:\Users\Cory\Documents\School>git add Git Hub Tutorial
+fatal: pathspec 'Git' did not match any files
+
+(base) C:\Users\Cory\Documents\School>git add "Git Hub Tutorial"
+warning: adding embedded git repository: Documents/School/Git Hub Tutorial
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> Documents/School/Git Hub Tutorial
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached Documents/School/Git Hub Tutorial
+hint:
+hint: See "git help submodule" for more information.
+
+(base) C:\Users\Cory\Documents\School>cd
+C:\Users\Cory\Documents\School
+
+(base) C:\Users\Cory\Documents\School>cd "Git Hub Tutorial"
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   I'm a text file.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        another text file.txt
+
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git add all
+fatal: pathspec 'all' did not match any files
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git add *
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   I'm a text file.txt
+        new file:   another text file.txt
+
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git commit -m "First commit"
+[master 79a2ded] First commit
+ 2 files changed, 1 insertion(+)
+ create mode 100644 I'm a text file.txt
+ create mode 100644 another text file.txt
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git status
+On branch master
+nothing to commit, working tree clean
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git push https://github.com/ustudent94/corySort
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream https://github.com/ustudent94/corySort master
+
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git push --set-upstream https://github.com/ustudent94/corySort master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 362 bytes | 362.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ustudent94/corySort
+   a073dc0..79a2ded  master -> master
+Branch 'master' set up to track remote branch 'master' from 'https://github.com/ustudent94/corySort'.
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   another text file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git add *
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git push
+Everything up-to-date
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git log
+commit 79a2ded1d68088b40494986be51473c15df64ba4 (HEAD -> master)
+Author: unknown <cory.s.christensen@hotmail.com>
+Date:   Fri Oct 23 20:14:54 2020 -0600
+
+    First commit
+
+commit a073dc0e01fa8a3e71afd7054422547fa4e560ba
+Author: unknown <cory.s.christensen@hotmail.com>
+Date:   Wed Jul 10 08:03:34 2019 -0600
+
+    Initial release of corySort algorithm
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git checkout a073dc0e01fa8a3e71afd7054422547fa4e560ba
+error: Your local changes to the following files would be overwritten by checkout:
+        another text file.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   another text file.txt
+
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git commit
+Aborting commit due to empty commit message.
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   another text file.txt
+
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git commit
+Aborting commit due to empty commit message.
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git commit -m "test"
+[master 89c35d3] test
+ 1 file changed, 1 insertion(+)
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git checkout a073dc0e01fa8a3e71afd7054422547fa4e560ba
+Note: switching to 'a073dc0e01fa8a3e71afd7054422547fa4e560ba'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at a073dc0 Initial release of corySort algorithm
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git checkout head
+HEAD is now at a073dc0 Initial release of corySort algorithm
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git log
+commit a073dc0e01fa8a3e71afd7054422547fa4e560ba (HEAD)
+Author: unknown <cory.s.christensen@hotmail.com>
+Date:   Wed Jul 10 08:03:34 2019 -0600
+
+    Initial release of corySort algorithm
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git checkout 79a2ded1d68088b40494986be51473c15df64ba4
+Previous HEAD position was a073dc0 Initial release of corySort algorithm
+HEAD is now at 79a2ded First commit
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git checkout head
+HEAD is now at 79a2ded First commit
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git checkout master
+Previous HEAD position was 79a2ded First commit
+Switched to branch 'master'
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git checkout head
+Note: switching to 'head'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 89c35d3 test
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git add *
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git commit -m "files for Nic"
+[detached HEAD 395ae75] files for Nic
+ 2 files changed, 280 insertions(+)
+ create mode 100644 Commands.txt
+ create mode 100644 Log of console.txt
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git push master
+fatal: You are not currently on a branch.
+To push the history leading to the current (detached HEAD)
+state now, use
+
+    git push master HEAD:<name-of-remote-branch>
+
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git push https://github.com/ustudent94/corySort
+fatal: You are not currently on a branch.
+To push the history leading to the current (detached HEAD)
+state now, use
+
+    git push https://github.com/ustudent94/corySort HEAD:<name-of-remote-branch>
+
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git checkout master
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  395ae75 files for Nic
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> 395ae75
+
+Switched to branch 'master'
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 275 bytes | 275.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/ustudent94/corySort
+   79a2ded..89c35d3  master -> master
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git log
+commit 89c35d38059ff6019e144023af1518c046175bdc (HEAD -> master)
+Author: unknown <cory.s.christensen@hotmail.com>
+Date:   Fri Oct 23 20:19:15 2020 -0600
+
+    test
+
+commit 79a2ded1d68088b40494986be51473c15df64ba4
+Author: unknown <cory.s.christensen@hotmail.com>
+Date:   Fri Oct 23 20:14:54 2020 -0600
+
+    First commit
+
+commit a073dc0e01fa8a3e71afd7054422547fa4e560ba
+Author: unknown <cory.s.christensen@hotmail.com>
+Date:   Wed Jul 10 08:03:34 2019 -0600
+
+    Initial release of corySort algorithm
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git checkout head
+Note: switching to 'head'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 89c35d3 test
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>git log
+commit 89c35d38059ff6019e144023af1518c046175bdc (HEAD, master)
+Author: unknown <cory.s.christensen@hotmail.com>
+Date:   Fri Oct 23 20:19:15 2020 -0600
+
+    test
+
+commit 79a2ded1d68088b40494986be51473c15df64ba4
+Author: unknown <cory.s.christensen@hotmail.com>
+Date:   Fri Oct 23 20:14:54 2020 -0600
+
+    First commit
+
+commit a073dc0e01fa8a3e71afd7054422547fa4e560ba
+Author: unknown <cory.s.christensen@hotmail.com>
+Date:   Wed Jul 10 08:03:34 2019 -0600
+
+    Initial release of corySort algorithm
+
+(base) C:\Users\Cory\Documents\School\Git Hub Tutorial>
